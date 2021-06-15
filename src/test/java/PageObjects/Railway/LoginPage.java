@@ -12,24 +12,24 @@ public class LoginPage {
     private final By _lblLoginErrorMsg = By.xpath("");
 
     //Elements
-    public WebElement getTxtUsername(){
+    public WebElement getTxtUsername() {
         return Constant.WEBDRIVER.findElement(_txtUsername);
     }
 
-    public WebElement getTxtPassword(){
+    public WebElement getTxtPassword() {
         return Constant.WEBDRIVER.findElement(_txtPassword);
     }
 
-    public WebElement getBtnLogin(){
+    public WebElement getBtnLogin() {
         return Constant.WEBDRIVER.findElement(_btnLogin);
     }
 
-    public WebElement getLblLoginErrorMsg(){
+    public WebElement getLblLoginErrorMsg() {
         return Constant.WEBDRIVER.findElement(_lblLoginErrorMsg);
     }
 
     //Methods
-    public HomePage login(String username, String password){
+    public HomePage login(String username, String password) {
         //Submit login credentials
         this.getTxtUsername().sendKeys(username);
         this.getTxtPassword().sendKeys(password);

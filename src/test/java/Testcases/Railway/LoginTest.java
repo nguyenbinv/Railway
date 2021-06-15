@@ -1,7 +1,7 @@
 package Testcases.Railway;
 
 import Common.Constant.Constant;
-import Common.Utilities.Utinities;
+import Common.Utilities.Utilities;
 import PageObjects.Railway.HomePage;
 import PageObjects.Railway.LoginPage;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +14,7 @@ public class LoginTest {
     @BeforeTest
     public void beforeMethod(){
         System.out.println("Pre-Condition");
-        System.setProperty("webdriver.chrome.driver", Utinities.getProjectPath()
+        System.setProperty("webdriver.chrome.driver", Utilities.getProjectPath()
             + "/Executables/chromedriver.exe");
         Constant.WEBDRIVER = new ChromeDriver();
         Constant.WEBDRIVER.manage().window().maximize();
