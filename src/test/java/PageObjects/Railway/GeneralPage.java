@@ -64,18 +64,23 @@ public class GeneralPage {
         return Constant.WEBDRIVER.findElement(tabLogout);
     }
 
-    protected WebElement getlblWelcomeMessage() {
+    protected WebElement getLblWelcomeMessage() {
         return Constant.WEBDRIVER.findElement(lblWelcomeMessage);
     }
 
     //Methods
     public String getWelcomeMessage() {
-        return this.getlblWelcomeMessage().getText();
+        return this.getLblWelcomeMessage().getText();
     }
 
     public LoginPage gotoLoginPage() {
         this.getTabLogin().click();
         return new LoginPage();
+    }
+
+    public RegisterPage gotoRegisterPage(){
+        this.getTabRegister().click();
+        return new RegisterPage();
     }
 
 }

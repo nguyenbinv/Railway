@@ -14,8 +14,8 @@ public class LoginTest {
     @BeforeTest
     public void beforeMethod(){
         System.out.println("Pre-Condition");
-        System.setProperty("webdriver.chrome.driver", Utilities.getProjectPath()
-            + "/Executables/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", Utilities.getProjectPath() +
+                "/src/test/java/Executables/chromedriver.exe");
         Constant.WEBDRIVER = new ChromeDriver();
         Constant.WEBDRIVER.manage().window().maximize();
     }
@@ -39,4 +39,5 @@ public class LoginTest {
 
         Assert.assertEquals(actualMsg, expectedMsg, "Welcome message is not displayed as expected");
     }
+
 }

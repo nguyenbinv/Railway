@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage {
     //Locators
-    private final By _txtUsername = By.xpath("");
-    private final By _txtPassword = By.xpath("");
-    private final By _btnLogin = By.xpath("");
-    private final By _lblLoginErrorMsg = By.xpath("");
+    private final By _txtUsername = By.xpath("//input[@id='username']");
+    private final By _txtPassword = By.xpath("//input[@id='password']");
+    private final By _btnLogin = By.xpath("//input[@type='submit']");
+    private final By _lblLoginErrorMsg = By.xpath("//p[@class='message error LoginForm']");
 
     //Elements
     public WebElement getTxtUsername() {

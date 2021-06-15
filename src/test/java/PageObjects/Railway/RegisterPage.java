@@ -2,6 +2,7 @@ package PageObjects.Railway;
 
 import Common.Constant.Constant;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 public class RegisterPage {
@@ -12,7 +13,9 @@ public class RegisterPage {
     private final By txtPassword = By.xpath("//input[@id='password']");
     private final By txtConfirmPassword = By.xpath("//input[@id='confirmPassword']");
     private final By txtPID = By.xpath("//input[@id='pid']");
-    private final By btRegister = By.xpath("//input[@type='submit']");
+    private final By btnRegister = By.xpath("//p/input[@type='submit']");
+    private final By lblErrorMsg = By.xpath("//p[@class='message error']");
+    private final By lblSuccessfulMsg = By.xpath("//div[@id='content']/p");
 
     //Elements
     protected WebElement linkLogin() {
@@ -39,8 +42,35 @@ public class RegisterPage {
         return Constant.WEBDRIVER.findElement(txtPID);
     }
 
-    protected WebElement getBtRegister() {
-        return Constant.WEBDRIVER.findElement(btRegister);
+    protected WebElement getBtnRegister() {
+        return Constant.WEBDRIVER.findElement(btnRegister);
+    }
+
+    protected WebElement getLblErrorMsg(){
+        return Constant.WEBDRIVER.findElement(lblErrorMsg);
+    }
+
+    protected WebElement getLblSuccessfulMsg(){
+        return Constant.WEBDRIVER.findElement(lblSuccessfulMsg);
+    }
+
+    //Methods
+    public RegisterPage register(String email, String password, String confirmPassword, String PID){
+        //Submit register credentials
+        this.getTxtEmail().sendKeys(email);
+        this.getTxtPassword().sendKeys(password);
+        this.getTxtConfirmPassword().sendKeys(confirmPassword);
+        this.getTxtPID().sendKeys(PID);
+        JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
+        js.executeScript("window.scrollBy(0,350)", "");
+        this.getBtnRegister().click();
+
+        //Land on register page
+        return this;
+    }
+
+    public String getRegisterSuccessfulMessage(){
+        return this.getLblSuccessfulMsg().getText();
     }
 
 }
