@@ -83,4 +83,9 @@ public class GeneralPage {
         return new RegisterPage();
     }
 
+    public BookTicketPage gotoBookTicketPage(){
+        this.getTabBookTicket().click();
+        return new BookTicketPage();
+    }
+
 }
