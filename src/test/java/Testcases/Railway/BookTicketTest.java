@@ -1,46 +1,58 @@
-//package Testcases.Railway;
-//
-//import Common.Constant.Constant;
-//import Common.Utilities.Utilities;
-//import PageObjects.Railway.BookTicketPage;
-//import PageObjects.Railway.HomePage;
-//import PageObjects.Railway.LoginPage;
-//import org.openqa.selenium.chrome.ChromeDriver;
-//import org.testng.Assert;
-//import org.testng.annotations.AfterMethod;
-//import org.testng.annotations.BeforeTest;
-//import org.testng.annotations.Test;
-//
-//public class BookTicketTest {
-//    @BeforeTest
-//    public void beforeMethod(){
-//        System.out.println("Pre-Condition");
-//        System.setProperty("webdriver.chrome.driver", Utilities.getProjectPath() +
-//                "/src/test/java/Executables/chromedriver.exe");
-//        Constant.WEBDRIVER = new ChromeDriver();
-//        Constant.WEBDRIVER.manage().window().maximize();
-//    }
-//
-//    @AfterMethod
-//    public void afterMethod(){
-//        System.out.println("Post-Condition");
-//        Constant.WEBDRIVER.quit();
-//    }
-//
-//    @Test
-//    public void TC01(){
-//        LoginTest login = new LoginTest();
-//        login.TC01();
-//        System.out.println("TC01 - User can book ticket with valid info");
-//        HomePage homePage = new HomePage();
-//        homePage.open();
-//
-//        BookTicketPage bookTicketPage = homePage.gotoBookTicketPage();
-//
-//        String actualMsg = bookTicketPage.bookTicket("6/20/2021", "Sài Gòn", "Đà Nẵng", "Hard seat", "1").getBookTicketSuccessfulMsg();
-//        String expectedMsg = "Ticket Booked Successfully!";
-//
-//        Assert.assertEquals(actualMsg, expectedMsg, "Book ticket successful message is not displayed as expected");
-//
-//    }
-//}
+package Testcases.Railway;
+
+import Common.Constant.Constant;
+import Common.Utilities.Utilities;
+import PageObjects.Railway.BookTicketPage;
+import PageObjects.Railway.HomePage;
+import PageObjects.Railway.LoginPage;
+import com.sun.source.tree.AssertTree;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class BookTicketTest extends BaseTest {
+    HomePage homePage = new HomePage();
+    LoginPage loginPage;
+    BookTicketPage bookTicketPage;
+
+    @Test
+    public void TC14() {
+        System.out.println("TC14 - User can book 1 ticket at a time");
+
+        homePage.open();
+
+        loginPage = homePage.gotoLoginPage();
+
+        loginPage.login(Constant.USERNAME, Constant.PASSWORD);
+
+        bookTicketPage = homePage.gotoBookTicketPage();
+
+        bookTicketPage.bookTicket("6/22/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
+
+        String actualBookTicketMsg = bookTicketPage.getBookTicketSuccessfulMsg();
+        String expectedBookTicketMsg = "Ticket booked successfully!";
+        Assert.assertEquals(actualBookTicketMsg, expectedBookTicketMsg, "A book ticket message is not displayed as expected");
+
+        String actualDepartStationInfo = bookTicketPage.getDepartStationInfo();
+        String expectedDepartStationInfo = "Sài Gòn";
+        Assert.assertEquals(actualDepartStationInfo, expectedDepartStationInfo);
+
+        String actualDepartArriveInfo = bookTicketPage.getArriveStationInfo();
+        String expectedDepartArriveInfo = "Nha Trang";
+        Assert.assertEquals(actualDepartArriveInfo, expectedDepartArriveInfo);
+
+        String actualDepartDateInfo = bookTicketPage.getDepartDateInfo();
+        String expectedDepartDateInfo = "6/22/2021";
+        Assert.assertEquals(actualDepartDateInfo, expectedDepartDateInfo);
+
+        String actualSeatTypeInfo = bookTicketPage.getSeatTypeInfo();
+        String expectedSeatTypeInfo = "Soft bed with air conditioner";
+        Assert.assertEquals(actualSeatTypeInfo, expectedSeatTypeInfo);
+
+        String actualTicketAmountInfo = bookTicketPage.getTicketAmountInfo();
+        String expectedTicketAmountInfo = "1";
+        Assert.assertEquals(actualTicketAmountInfo, expectedTicketAmountInfo);
+    }
+}

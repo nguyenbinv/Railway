@@ -4,18 +4,20 @@ Common/Constant/Constant.java
  Common.Constant.Constant
 Testcases/Railway/BaseTest.java
  Testcases.Railway.BaseTest
+Common/Utilities/Utilities.java
+ Common.Utilities.Utilities
 PageObjects/Railway/ContactPage.java
  PageObjects.Railway.ContactPage
 PageObjects/Railway/TimetablePage.java
  PageObjects.Railway.TimetablePage
-Common/Utilities/Utilities.java
- Common.Utilities.Utilities
 PageObjects/Railway/BookTicketPage.java
  PageObjects.Railway.BookTicketPage
+Testcases/Railway/BookTicketTest.java
+ Testcases.Railway.BookTicketTest
 PageObjects/Railway/GeneralPage.java
  PageObjects.Railway.GeneralPage
-PageObjects/Railway/LoginPage.java
- PageObjects.Railway.LoginPage
+Testcases/Railway/RegisterTest.java
+ Testcases.Railway.RegisterTest
 Testcases/Railway/LoginTest.java
  Testcases.Railway.LoginTest
 PageObjects/Railway/RegisterPage.java
@@ -28,5 +30,5 @@ PageObjects/Railway/MyTicketPage.java
  PageObjects.Railway.MyTicketPage
 PageObjects/Railway/HomePage.java
  PageObjects.Railway.HomePage
-Testcases/Railway/RegisterTest.java
- Testcases.Railway.RegisterTest
+PageObjects/Railway/LoginPage.java
+ PageObjects.Railway.LoginPage
