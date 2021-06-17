@@ -4,7 +4,7 @@ import Common.Constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class MyTicketPage {
+public class MyTicketPage extends GeneralPage {
     //Locator
     private final By drbDepartStationFilter = By.xpath("//select[@name='FilterDpStation']");
     private final By drbArriverStationFilter = By.xpath("//select[@name='FilterArStation']");

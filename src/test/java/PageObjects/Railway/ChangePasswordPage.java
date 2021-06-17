@@ -4,7 +4,7 @@ import Common.Constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class ChangePasswordPage {
+public class ChangePasswordPage extends GeneralPage {
     //Locator
     private final By txtCurrentPassword = By.xpath("//input[@id='currentPassword']");
     private final By txtNewPassword = By.xpath("//input[@id='newPassword']");

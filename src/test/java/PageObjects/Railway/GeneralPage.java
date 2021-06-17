@@ -17,7 +17,7 @@ public class GeneralPage {
     private final By tabMyTicket = By.xpath("//div[@id='menu']/ul/li/a/span[text()='My ticket']");
     private final By tabChangePassword = By.xpath("//div[@id='menu']/ul/li/a/span[text()='Change password']");
     private final By tabLogout = By.xpath("//div[@id='menu']/ul/li/a/span[text()='Log out']");
-    private final By lblWelcomeMessage = By.xpath("//div[@class='account']");
+    private final By lblWelcomeMessage = By.xpath("//div[@id='banner']/div/strong");
 
     //Elements
     protected WebElement getTabHome() {
@@ -83,4 +83,26 @@ public class GeneralPage {
         return new RegisterPage();
     }
 
+    public BookTicketPage gotoBookTicketPage(){
+        this.getTabBookTicket().click();
+        return new BookTicketPage();
+    }
+
+    public String getPageTitle(){
+        return Constant.WEBDRIVER.getTitle();
+    }
+
+    public MyTicketPage gotoMyticketPage() {
+        this.getTabMyTicket().click();
+        return new MyTicketPage();
+    }
+
+    public ChangePasswordPage gotoChangePasswordPage(){
+        this.getTabChangePassword().click();
+        return new ChangePasswordPage();
+    }
+
+    public void gotoLogout(){
+        this.getTabLogout().click();
+    }
 }

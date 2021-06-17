@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class BookTicketPage {
+public class BookTicketPage extends GeneralPage {
     //Locator
     private final By drbDepartDate = By.xpath("//select[@name='Date']");
     private final By drbDepartFrom = By.xpath("//select[@name='DepartStation']");
