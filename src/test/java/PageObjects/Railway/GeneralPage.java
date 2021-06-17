@@ -78,39 +78,9 @@ public class GeneralPage {
         return new LoginPage();
     }
 
-    public RegisterPage gotoRegisterPage() {
+    public RegisterPage gotoRegisterPage(){
         this.getTabRegister().click();
         return new RegisterPage();
-    }
-
-    public ContactPage gotoContactPage() {
-        this.getTabContact().click();
-        return new ContactPage();
-    }
-
-    public TimetablePage gotoTimetablePage() {
-        this.getTabTimetable().click();
-        return new TimetablePage();
-    }
-
-    public TicketPricePage gotoTicketPricePage() {
-        this.getTabTicketPrice().click();
-        return new TicketPricePage();
-    }
-
-    public BookTicketPage gotoBookTicketPage() {
-        this.getTabBookTicket().click();
-        return new BookTicketPage();
-    }
-
-    public MyTicketPage gotoMyTicketPage() {
-        this.getTabTicketPrice().click();
-        return new MyTicketPage();
-    }
-
-    public ChangePasswordPage gotoChangePasswordPage() {
-        this.getTabChangePassword().click();
-        return new ChangePasswordPage();
     }
 
 }
