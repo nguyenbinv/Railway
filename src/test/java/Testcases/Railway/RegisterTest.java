@@ -10,33 +10,63 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class RegisterTest {
-    @BeforeTest
-    public void beforeMethod(){
-        System.out.println("Pre-Condition");
-        System.setProperty("webdriver.chrome.driver", Utilities.getProjectPath() +
-                "/src/test/java/Executables/chromedriver.exe");
-        Constant.WEBDRIVER = new ChromeDriver();
-        Constant.WEBDRIVER.manage().window().maximize();
-    }
+public class RegisterTest extends BaseTest {
+    HomePage homePage = new HomePage();
+    RegisterPage registerPage;
 
-    @AfterMethod
-    public void afterMethod(){
-        System.out.println("Post-Condition");
-        Constant.WEBDRIVER.quit();
+    @Test
+    public void TC07() {
+        System.out.println("TC07 - User can create new account");
+
+        homePage.open();
+
+        registerPage = homePage.gotoRegisterPage();
+
+        registerPage.register("nguyenvanhuy0@gmail.com", "abcd1234", "abcd1234", "123456780");
+
+        String actualMsg = registerPage.getPasswordMessage();
+        String expectedMsg = "Thank you for registering your account";
+
+        Assert.assertEquals(actualMsg, expectedMsg, "A register message is not displayed as expected");
     }
 
     @Test
-    public void TC02(){
-        System.out.println("TC01 - User can register Railway with valid email and password");
-        HomePage homePage = new HomePage();
+    public void TC10() {
+        System.out.println("TC10 - User can't create account with \"Confirm password\" is not the same with \"Password\"");
+
         homePage.open();
 
-        RegisterPage registerPage = homePage.gotoRegisterPage();
+        registerPage = homePage.gotoRegisterPage();
 
-        String actualMsg = registerPage.register("nguyenvanhuy5@gmail.com", "abcd1234", "abcd1234", "123456789").getRegisterSuccessfulMessage();
-        String expectedMsg = "You're here";
+        registerPage.register("nguyenvanhuy00@gmail.com", "abcd1234", "abcd4321", "123456780");
 
-        Assert.assertEquals(actualMsg, expectedMsg, "Successful message is not displayed as expected");
+        String actualMsg = registerPage.getErrorMessage();
+        String expectedMsg = "There're errors in the form. Please correct the errors and try again.";
+
+        Assert.assertEquals(actualMsg, expectedMsg, "A register message is not displayed as expected");
     }
+
+    @Test
+    public void TC11() {
+        System.out.println("TC11 - User can't create account while password and PID fields are empty");
+
+        homePage.open();
+
+        registerPage = homePage.gotoRegisterPage();
+
+        registerPage.register("nguyenvanhuy00@gmail.com", "", "abcd4321", "");
+
+        String actualErrorMsg = registerPage.getErrorMessage();
+        String expectedErrorMsg = "There're errors in the form. Please correct the errors and try again.";
+        Assert.assertEquals(actualErrorMsg, expectedErrorMsg, "A register message is not displayed as expected");
+
+        String actualPasswordMsg = registerPage.getPasswordMessage();
+        String expectedPasswordMsg = "Invalid password length.";
+        Assert.assertEquals(actualPasswordMsg, expectedPasswordMsg, "A password message is not displayed as expected");
+
+        String actualPIDMsg = registerPage.getPIDMessage();
+        String expectedPIDMsg = "Invalid ID length.";
+        Assert.assertEquals(actualPIDMsg, expectedPIDMsg, "A PID message is not displayed as expected");
+    }
+
 }

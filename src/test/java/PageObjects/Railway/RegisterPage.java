@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-public class RegisterPage {
+public class RegisterPage extends GeneralPage {
     //Locator
     private final By linkLogin = By.xpath("//div[@id='content']/p/a[text()='login']");
     private final By linkConfirmEmail = By.xpath("//div[@id='content']/p/a[text()='here']");
@@ -15,7 +15,9 @@ public class RegisterPage {
     private final By txtPID = By.xpath("//input[@id='pid']");
     private final By btnRegister = By.xpath("//p/input[@type='submit']");
     private final By lblErrorMsg = By.xpath("//p[@class='message error']");
-    private final By lblSuccessfulMsg = By.xpath("//div[@id='content']/p");
+    private final By lblRegisterMsg = By.xpath("//div[@id='content']/p");
+    private final By lblPasswordMsg = By.xpath("//form/fieldset/ol/li[@class='password']/label[@class='validation-error']");
+    private final By lblPIDMsg = By.xpath("//form/fieldset/ol/li[@class='pid-number']/label[@class='validation-error']");
 
     //Elements
     protected WebElement linkLogin() {
@@ -46,16 +48,24 @@ public class RegisterPage {
         return Constant.WEBDRIVER.findElement(btnRegister);
     }
 
-    protected WebElement getLblErrorMsg(){
+    protected WebElement getLblErrorMsg() {
         return Constant.WEBDRIVER.findElement(lblErrorMsg);
     }
 
-    protected WebElement getLblSuccessfulMsg(){
-        return Constant.WEBDRIVER.findElement(lblSuccessfulMsg);
+    protected WebElement getLblRegisterMsg() {
+        return Constant.WEBDRIVER.findElement(lblRegisterMsg);
+    }
+
+    protected WebElement getLblPasswordMsg(){
+        return Constant.WEBDRIVER.findElement(lblPasswordMsg);
+    }
+
+    protected WebElement getLblPIDMsg(){
+        return Constant.WEBDRIVER.findElement(lblPIDMsg);
     }
 
     //Methods
-    public RegisterPage register(String email, String password, String confirmPassword, String PID){
+    public RegisterPage register(String email, String password, String confirmPassword, String PID) {
         //Submit register credentials
         this.getTxtEmail().sendKeys(email);
         this.getTxtPassword().sendKeys(password);
@@ -69,8 +79,20 @@ public class RegisterPage {
         return this;
     }
 
-    public String getRegisterSuccessfulMessage(){
-        return this.getLblSuccessfulMsg().getText();
+    public String getRegisterMessage() {
+        return this.getLblRegisterMsg().getText();
+    }
+
+    public String getErrorMessage() {
+        return this.getLblErrorMsg().getText();
+    }
+
+    public String getPasswordMessage(){
+        return this.getLblPasswordMsg().getText();
+    }
+
+    public String getPIDMessage(){
+        return this.getLblPIDMsg().getText();
     }
 
 }

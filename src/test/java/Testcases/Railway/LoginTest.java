@@ -2,6 +2,7 @@ package Testcases.Railway;
 
 import Common.Constant.Constant;
 import PageObjects.Railway.*;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,6 +12,7 @@ public class LoginTest extends BaseTest {
     private BookTicketPage bookTicketPage;
     private MyTicketPage myTicketPage;
     private ChangePasswordPage changePasswordPage;
+    private RegisterPage registerPage;
 
     @Test
     public void TC01() {
@@ -83,6 +85,8 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = homePage.gotoLoginPage();
 
         for (int i = 0; i < 4; i++) {
+            JavascriptExecutor jse = (JavascriptExecutor)Constant.WEBDRIVER;
+            jse.executeScript("scroll(0, 9000)");
             loginPage.login(Constant.USERNAME, "abcd4321");
         }
 
