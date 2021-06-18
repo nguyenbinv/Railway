@@ -13,27 +13,27 @@ public class MyTicketPage extends GeneralPage {
     private final By btnApplyFilter = By.xpath("//input[@type='submit']");
 
     //Elements
-    protected WebElement getDrbDepartStationFilter(){
+    protected WebElement getDrbDepartStationFilter() {
         return Constant.WEBDRIVER.findElement(drbDepartStationFilter);
     }
 
-    protected WebElement getDrbArriverStationFilter(){
+    protected WebElement getDrbArriverStationFilter() {
         return Constant.WEBDRIVER.findElement(drbArriverStationFilter);
     }
 
-    protected WebElement getTxtDepartDateFilter(){
+    protected WebElement getTxtDepartDateFilter() {
         return Constant.WEBDRIVER.findElement(txtDepartDateFilter);
     }
 
-    protected WebElement getDrbStatus(){
+    protected WebElement getDrbStatus() {
         return Constant.WEBDRIVER.findElement(drbStatus);
     }
 
-    protected WebElement getBtnApplyFilter(){
+    protected WebElement getBtnApplyFilter() {
         return Constant.WEBDRIVER.findElement(btnApplyFilter);
     }
 
-    protected WebElement getBtnCancel(String no){
+    protected WebElement getBtnCancel(String no) {
         return Constant.WEBDRIVER.findElement(By.xpath("//table[@class='MyTable']/tbody/tr/td[1][text()='" + no + "']" +
                 "/following-sibling::td/input[@type='button']"));
     }

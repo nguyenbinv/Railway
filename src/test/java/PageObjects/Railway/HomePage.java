@@ -9,7 +9,7 @@ public class HomePage extends GeneralPage {
     private final By linkCreateAnAccount = By.xpath("//div[@id='content']/div/a");
 
     //Elements
-    protected WebElement getLinkCreateAnAccount(){
+    protected WebElement getLinkCreateAnAccount() {
         return Constant.WEBDRIVER.findElement(linkCreateAnAccount);
     }
 

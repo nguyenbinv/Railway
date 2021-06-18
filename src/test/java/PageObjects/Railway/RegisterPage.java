@@ -56,11 +56,11 @@ public class RegisterPage extends GeneralPage {
         return Constant.WEBDRIVER.findElement(lblRegisterMsg);
     }
 
-    protected WebElement getLblPasswordMsg(){
+    protected WebElement getLblPasswordMsg() {
         return Constant.WEBDRIVER.findElement(lblPasswordMsg);
     }
 
-    protected WebElement getLblPIDMsg(){
+    protected WebElement getLblPIDMsg() {
         return Constant.WEBDRIVER.findElement(lblPIDMsg);
     }
 
@@ -87,11 +87,11 @@ public class RegisterPage extends GeneralPage {
         return this.getLblErrorMsg().getText();
     }
 
-    public String getPasswordMessage(){
+    public String getPasswordMessage() {
         return this.getLblPasswordMsg().getText();
     }
 
-    public String getPIDMessage(){
+    public String getPIDMessage() {
         return this.getLblPIDMsg().getText();
     }
 

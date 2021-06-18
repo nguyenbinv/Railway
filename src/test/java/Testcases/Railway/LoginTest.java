@@ -85,7 +85,7 @@ public class LoginTest extends BaseTest {
         LoginPage loginPage = homePage.gotoLoginPage();
 
         for (int i = 0; i < 4; i++) {
-            JavascriptExecutor jse = (JavascriptExecutor)Constant.WEBDRIVER;
+            JavascriptExecutor jse = (JavascriptExecutor) Constant.WEBDRIVER;
             jse.executeScript("scroll(0, 9000)");
             loginPage.login(Constant.USERNAME, "abcd4321");
         }
@@ -106,7 +106,7 @@ public class LoginTest extends BaseTest {
 
         loginPage.login(Constant.USERNAME, Constant.PASSWORD);
 
-        myTicketPage = loginPage.gotoMyticketPage();
+        myTicketPage = loginPage.gotoMyTicketPage();
         String actualTitle = myTicketPage.getPageTitle();
         String expectedTitle = "Safe Railway - My Ticket";
         Assert.assertEquals(actualTitle, expectedTitle, "My ticket page is not displayed as expected");

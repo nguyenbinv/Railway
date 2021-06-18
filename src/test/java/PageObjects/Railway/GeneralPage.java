@@ -78,31 +78,31 @@ public class GeneralPage {
         return new LoginPage();
     }
 
-    public RegisterPage gotoRegisterPage(){
+    public RegisterPage gotoRegisterPage() {
         this.getTabRegister().click();
         return new RegisterPage();
     }
 
-    public BookTicketPage gotoBookTicketPage(){
+    public BookTicketPage gotoBookTicketPage() {
         this.getTabBookTicket().click();
         return new BookTicketPage();
     }
 
-    public String getPageTitle(){
+    public String getPageTitle() {
         return Constant.WEBDRIVER.getTitle();
     }
 
-    public MyTicketPage gotoMyticketPage() {
+    public MyTicketPage gotoMyTicketPage() {
         this.getTabMyTicket().click();
         return new MyTicketPage();
     }
 
-    public ChangePasswordPage gotoChangePasswordPage(){
+    public ChangePasswordPage gotoChangePasswordPage() {
         this.getTabChangePassword().click();
         return new ChangePasswordPage();
     }
 
-    public void gotoLogout(){
+    public void gotoLogout() {
         this.getTabLogout().click();
     }
 }

@@ -36,7 +36,7 @@ public class LoginPage extends GeneralPage {
         this.getBtnLogin().click();
     }
 
-    public String getLoginErrorMsg(){
+    public String getLoginErrorMsg() {
         return this.getLblLoginErrorMsg().getText();
     }
 

@@ -50,23 +50,23 @@ public class BookTicketPage extends GeneralPage {
         return Constant.WEBDRIVER.findElement(lblBookSuccessful);
     }
 
-    protected WebElement getLblDepartStation(){
+    protected WebElement getLblDepartStation() {
         return Constant.WEBDRIVER.findElement(lblDepartStation);
     }
 
-    protected WebElement getLblArriveStation(){
+    protected WebElement getLblArriveStation() {
         return Constant.WEBDRIVER.findElement(lblArriveStation);
     }
 
-    protected WebElement getLblSeatType(){
+    protected WebElement getLblSeatType() {
         return Constant.WEBDRIVER.findElement(lblSeatType);
     }
 
-    protected WebElement getLblDepartDate(){
+    protected WebElement getLblDepartDate() {
         return Constant.WEBDRIVER.findElement(lblDepartDate);
     }
 
-    protected WebElement getLblTicketAmount(){
+    protected WebElement getLblTicketAmount() {
         return Constant.WEBDRIVER.findElement(lblTicketAmount);
     }
 
@@ -94,23 +94,23 @@ public class BookTicketPage extends GeneralPage {
         return this.getLblBookSuccessful().getText();
     }
 
-    public String getDepartDateInfo(){
+    public String getDepartDateInfo() {
         return this.getLblDepartDate().getText();
     }
 
-    public String getDepartStationInfo(){
+    public String getDepartStationInfo() {
         return this.getLblDepartStation().getText();
     }
 
-    public String getArriveStationInfo(){
+    public String getArriveStationInfo() {
         return this.getLblArriveStation().getText();
     }
 
-    public String getSeatTypeInfo(){
+    public String getSeatTypeInfo() {
         return this.getLblSeatType().getText();
     }
 
-    public String getTicketAmountInfo(){
+    public String getTicketAmountInfo() {
         return this.getLblTicketAmount().getText();
     }
 }
