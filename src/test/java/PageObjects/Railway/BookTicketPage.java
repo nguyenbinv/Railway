@@ -70,6 +70,16 @@ public class BookTicketPage extends GeneralPage {
         return Constant.WEBDRIVER.findElement(lblTicketAmount);
     }
 
+    public String getDepartStation() {
+        Select selectDepartFrom = new Select(getDrbDepartFrom());
+        return selectDepartFrom.getFirstSelectedOption().getText();
+    }
+
+    public String getArriveStation() {
+        Select selectArriveAt = new Select(getDrbArriveAt());
+        return selectArriveAt.getFirstSelectedOption().getText();
+    }
+
     //Methods
     public BookTicketPage bookTicket(String departDate, String departFrom, String arriveAt, String seatType, String ticketAmount) {
         //Submit book ticket credentials

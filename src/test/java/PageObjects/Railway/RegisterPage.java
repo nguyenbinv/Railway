@@ -65,7 +65,7 @@ public class RegisterPage extends GeneralPage {
     }
 
     //Methods
-    public RegisterPage register(String email, String password, String confirmPassword, String PID) {
+    public void register(String email, String password, String confirmPassword, String PID) {
         //Submit register credentials
         this.getTxtEmail().sendKeys(email);
         this.getTxtPassword().sendKeys(password);
@@ -74,9 +74,6 @@ public class RegisterPage extends GeneralPage {
         JavascriptExecutor js = (JavascriptExecutor) Constant.WEBDRIVER;
         js.executeScript("window.scrollBy(0,350)", "");
         this.getBtnRegister().click();
-
-        //Land on register page
-        return this;
     }
 
     public String getRegisterMessage() {

@@ -4,6 +4,12 @@ PageObjects/Railway/ContactPage.java
  PageObjects.Railway.ContactPage
 Common/Constant/Constant.java
  Common.Constant.Constant
+Common/Utilities/Utilities.java
+ Common.Utilities.Utilities
+Testcases/Railway/BaseTest.java
+ Testcases.Railway.BaseTest
+Common/Utilities/CheckTicketInfo.java
+ Common.Utilities.CheckTicketInfo
 Testcases/Railway/ChangePasswordTest.java
  Testcases.Railway.ChangePasswordTest
 PageObjects/Railway/ChangePasswordPage.java
@@ -14,23 +20,21 @@ PageObjects/Railway/TimetablePage.java
  PageObjects.Railway.TimetablePage
 PageObjects/Railway/BookTicketPage.java
  PageObjects.Railway.BookTicketPage
-PageObjects/Railway/LoginPage.java
- PageObjects.Railway.LoginPage
+Testcases/Railway/BookTicketTest.java
+ Testcases.Railway.BookTicketTest
 PageObjects/Railway/GeneralPage.java
  PageObjects.Railway.GeneralPage
+Testcases/Railway/TimetableTest.java
+ Testcases.Railway.TimetableTest
 Testcases/Railway/RegisterTest.java
  Testcases.Railway.RegisterTest
 Testcases/Railway/LoginTest.java
  Testcases.Railway.LoginTest
 PageObjects/Railway/RegisterPage.java
  PageObjects.Railway.RegisterPage
-Testcases/Railway/BaseTest.java
- Testcases.Railway.BaseTest
-Common/Utilities/Utilities.java
- Common.Utilities.Utilities
+Common/Utilities/CheckBookTicketStation.java
+ Common.Utilities.CheckBookTicketStation
 PageObjects/Railway/HomePage.java
  PageObjects.Railway.HomePage
-Common/Utilities/CheckTicketInfo.java
- Common.Utilities.CheckTicketInfo
-Testcases/Railway/BookTicketTest.java
- Testcases.Railway.BookTicketTest
+PageObjects/Railway/LoginPage.java
+ PageObjects.Railway.LoginPage

@@ -105,4 +105,10 @@ public class GeneralPage {
     public void gotoLogout() {
         this.getTabLogout().click();
     }
+
+    public TimetablePage gotoTimetablePage() {
+        this.getTabTimetable().click();
+        return new TimetablePage();
+    }
+
 }
