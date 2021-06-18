@@ -11,6 +11,12 @@ public class MyTicketPage extends GeneralPage {
     private final By txtDepartDateFilter = By.xpath("//input[@name='FilterDpDate']");
     private final By drbStatus = By.xpath("//select[@name='FilterStatus']");
     private final By btnApplyFilter = By.xpath("//input[@type='submit']");
+    private final By lblDepartStationInfo = By.xpath("//table[@class='MyTable']/tbody/tr/td[count(//tr/th[text()='Depart Station']/preceding-sibling::th)+1]");
+    private final By lblArriveStationInfo = By.xpath("//table[@class='MyTable']/tbody/tr/td[count(//tr/th[text()='Arrive Station']/preceding-sibling::th)+1]");
+    private final By lblSeatTypeInfo = By.xpath("//table[@class='MyTable']/tbody/tr/td[count(//tr/th[text()='Seat Type Station']/preceding-sibling::th)+1]");
+    private final By lblDepartDateInfo = By.xpath("//table[@class='MyTable']/tbody/tr/td[count(//tr/th[text()='Depart Date']/preceding-sibling::th)+1]");
+    private final By lblAmountInfo = By.xpath("//table[@class='MyTable']/tbody/tr/td[count(//tr/th[text()='Amount']/preceding-sibling::th)+1]");
+    private final By tableContent = By.xpath("//table[@class='MyTable']");
 
     //Elements
     protected WebElement getDrbDepartStationFilter() {
@@ -33,8 +39,70 @@ public class MyTicketPage extends GeneralPage {
         return Constant.WEBDRIVER.findElement(btnApplyFilter);
     }
 
-    protected WebElement getBtnCancel(String no) {
-        return Constant.WEBDRIVER.findElement(By.xpath("//table[@class='MyTable']/tbody/tr/td[1][text()='" + no + "']" +
-                "/following-sibling::td/input[@type='button']"));
+    protected WebElement getBtnCancel(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
+        return Constant.WEBDRIVER.findElement(By.xpath("//table[@class='MyTable']/tbody/tr/td[" +
+                "text()='" + departStation + "']/following-sibling::td[" +
+                "text()='" + arriveStation + "']/following-sibling::td[" +
+                "text()='" + seatType + "']/following-sibling::td[" +
+                "text()='" + departDate + "']/following-sibling::td[" +
+                "text()='" + ticketAmount + "']/following-sibling::td/input"));
     }
+
+    protected WebElement getLblDepartStationInfo() {
+        return Constant.WEBDRIVER.findElement(lblDepartStationInfo);
+    }
+
+    protected WebElement getLblArriveStationInfo() {
+        return Constant.WEBDRIVER.findElement(lblArriveStationInfo);
+    }
+
+    protected WebElement getLblSeatTypeInfo() {
+        return Constant.WEBDRIVER.findElement(lblSeatTypeInfo);
+    }
+
+    protected WebElement getLblDepartDateInfo() {
+        return Constant.WEBDRIVER.findElement(lblDepartDateInfo);
+    }
+
+    protected WebElement getLblAmountInfo() {
+        return Constant.WEBDRIVER.findElement(lblAmountInfo);
+    }
+
+    protected int getTableContent() {
+        return Constant.WEBDRIVER.findElements(tableContent).size();
+    }
+
+    //Methods
+    public boolean isTableContentExist() {
+        return getTableContent() > 0;
+    }
+
+    public void cancelTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
+        boolean isTableContentExist = isTableContentExist();
+        if (isTableContentExist){
+            this.getBtnCancel(departDate, departStation, arriveStation, seatType, ticketAmount).click();
+            Constant.WEBDRIVER.switchTo().alert().accept();
+        }
+    }
+
+    public String getDepartStation() {
+        return getLblDepartStationInfo().getText();
+    }
+
+    public String getArriveStation() {
+        return getLblArriveStationInfo().getText();
+    }
+
+    public String getSeatType() {
+        return getLblSeatTypeInfo().getText();
+    }
+
+    public String getDepartDate() {
+        return getLblDepartDateInfo().getText();
+    }
+
+    public String getAmount() {
+        return getLblAmountInfo().getText();
+    }
+
 }

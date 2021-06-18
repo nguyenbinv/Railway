@@ -2,7 +2,6 @@ package Testcases.Railway;
 
 import Common.Constant.Constant;
 import Common.Utilities.CheckBookTicketStation;
-import Common.Utilities.CheckTicketInfo;
 import PageObjects.Railway.BookTicketPage;
 import PageObjects.Railway.HomePage;
 import PageObjects.Railway.LoginPage;

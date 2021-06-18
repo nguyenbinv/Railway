@@ -1,7 +1,7 @@
 package Testcases.Railway;
 
 import Common.Constant.Constant;
-import Common.Utilities.CheckTicketInfo;
+import Common.Utilities.CheckBookTicketInfo;
 import PageObjects.Railway.BookTicketPage;
 import PageObjects.Railway.HomePage;
 import PageObjects.Railway.LoginPage;
@@ -31,7 +31,7 @@ public class BookTicketTest extends BaseTest {
         String expectedBookTicketMsg = "Ticket Booked Successfully!";
         Assert.assertEquals(actualBookTicketMsg, expectedBookTicketMsg, "A book ticket message is not displayed as expected");
 
-        boolean checkActualTicketInfo = CheckTicketInfo.checkTicketInfo(bookTicketPage, "6/23/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
+        boolean checkActualTicketInfo = CheckBookTicketInfo.checkTicketInfo(bookTicketPage, "6/23/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
         Assert.assertTrue(checkActualTicketInfo, "Ticket info is not display as booked");
     }
 }

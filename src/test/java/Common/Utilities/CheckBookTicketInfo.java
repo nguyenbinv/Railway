@@ -2,7 +2,7 @@ package Common.Utilities;
 
 import PageObjects.Railway.BookTicketPage;
 
-public class CheckTicketInfo {
+public class CheckBookTicketInfo {
     public static boolean checkTicketInfo(BookTicketPage bookTicketPage, String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
         String actualDepartDate = bookTicketPage.getDepartDateInfo();
         String actualDepartStation = bookTicketPage.getDepartStationInfo();
