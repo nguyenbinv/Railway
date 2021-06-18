@@ -2,10 +2,7 @@ package Testcases.Railway;
 
 import Common.Constant.Constant;
 import Common.Utilities.CheckBookTicketStation;
-import PageObjects.Railway.BookTicketPage;
-import PageObjects.Railway.HomePage;
-import PageObjects.Railway.LoginPage;
-import PageObjects.Railway.TimetablePage;
+import PageObjects.Railway.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -23,7 +20,7 @@ public class TimetableTest extends BaseTest {
 
         loginPage = homePage.gotoLoginPage();
 
-        loginPage.login(Constant.USERNAME, Constant.PASSWORD);
+        loginPage.login(Constant.USERNAME, Constant.NEW_PASSWORD);
 
         timetablePage = homePage.gotoTimetablePage();
 
@@ -32,4 +29,5 @@ public class TimetableTest extends BaseTest {
         boolean checkStationValue = CheckBookTicketStation.checkBookTicketStation(bookTicketPage, "Huế", "Sài Gòn");
         Assert.assertTrue(checkStationValue);
     }
+
 }

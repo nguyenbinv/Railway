@@ -21,7 +21,7 @@ public class BookTicketTest extends BaseTest {
 
         loginPage = homePage.gotoLoginPage();
 
-        loginPage.login(Constant.USERNAME, Constant.PASSWORD);
+        loginPage.login(Constant.USERNAME, Constant.NEW_PASSWORD);
 
         bookTicketPage = homePage.gotoBookTicketPage();
 

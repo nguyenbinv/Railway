@@ -4,12 +4,6 @@ Common/Constant/Constant.java
  Common.Constant.Constant
 Common/Utilities/Utilities.java
  Common.Utilities.Utilities
-Testcases/Railway/BaseTest.java
- Testcases.Railway.BaseTest
-PageObjects/Railway/ContactPage.java
- PageObjects.Railway.ContactPage
-Testcases/Railway/ChangePasswordTest.java
- Testcases.Railway.ChangePasswordTest
 PageObjects/Railway/ChangePasswordPage.java
  PageObjects.Railway.ChangePasswordPage
 PageObjects/Railway/MyTicketPage.java
@@ -20,25 +14,31 @@ PageObjects/Railway/TimetablePage.java
  PageObjects.Railway.TimetablePage
 PageObjects/Railway/BookTicketPage.java
  PageObjects.Railway.BookTicketPage
-Testcases/Railway/BookTicketTest.java
- Testcases.Railway.BookTicketTest
+PageObjects/Railway/ContactPage.java
+ PageObjects.Railway.ContactPage
 PageObjects/Railway/GeneralPage.java
  PageObjects.Railway.GeneralPage
+PageObjects/Railway/LoginPage.java
+ PageObjects.Railway.LoginPage
+Common/Utilities/CheckBookTicketInfo.java
+ Common.Utilities.CheckBookTicketInfo
+PageObjects/Railway/HomePage.java
+ PageObjects.Railway.HomePage
+PageObjects/Railway/RegisterPage.java
+ PageObjects.Railway.RegisterPage
+Common/Utilities/CheckBookTicketStation.java
+ Common.Utilities.CheckBookTicketStation
+Testcases/Railway/BookTicketTest.java
+ Testcases.Railway.BookTicketTest
 Testcases/Railway/TimetableTest.java
  Testcases.Railway.TimetableTest
 Testcases/Railway/RegisterTest.java
  Testcases.Railway.RegisterTest
 Testcases/Railway/LoginTest.java
  Testcases.Railway.LoginTest
-PageObjects/Railway/RegisterPage.java
- PageObjects.Railway.RegisterPage
-Common/Utilities/CheckBookTicketStation.java
- Common.Utilities.CheckBookTicketStation
+Testcases/Railway/BaseTest.java
+ Testcases.Railway.BaseTest
+Testcases/Railway/ChangePasswordTest.java
+ Testcases.Railway.ChangePasswordTest
 Testcases/Railway/MyTicketTest.java
  Testcases.Railway.MyTicketTest
-PageObjects/Railway/HomePage.java
- PageObjects.Railway.HomePage
-PageObjects/Railway/LoginPage.java
- PageObjects.Railway.LoginPage
-Common/Utilities/CheckBookTicketInfo.java
- Common.Utilities.CheckBookTicketInfo

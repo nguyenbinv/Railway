@@ -4,7 +4,6 @@ import Common.Constant.Constant;
 import PageObjects.Railway.ChangePasswordPage;
 import PageObjects.Railway.HomePage;
 import PageObjects.Railway.LoginPage;
-import PageObjects.Railway.RegisterPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

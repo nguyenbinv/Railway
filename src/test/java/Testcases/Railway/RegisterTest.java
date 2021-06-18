@@ -1,14 +1,10 @@
 package Testcases.Railway;
 
-import Common.Constant.Constant;
-import Common.Utilities.Utilities;
 import PageObjects.Railway.HomePage;
 import PageObjects.Railway.RegisterPage;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import java.util.Random;
 
 public class RegisterTest extends BaseTest {
     HomePage homePage = new HomePage();
@@ -22,9 +18,11 @@ public class RegisterTest extends BaseTest {
 
         registerPage = homePage.gotoRegisterPage();
 
-        registerPage.register("nguyenvanhuy0@gmail.com", "abcd1234", "abcd1234", "123456780");
+        Random generator = new Random();
 
-        String actualMsg = registerPage.getPasswordMessage();
+        registerPage.register("nguyenvanhuy" + generator.nextInt(9999) + "@gmail.com", "abcd1234", "abcd1234", "123456780");
+
+        String actualMsg = registerPage.getRegisterMessage();
         String expectedMsg = "Thank you for registering your account";
 
         Assert.assertEquals(actualMsg, expectedMsg, "A register message is not displayed as expected");

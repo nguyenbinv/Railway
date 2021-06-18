@@ -4,6 +4,8 @@ import Common.Constant.Constant;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class MyTicketPage extends GeneralPage {
     //Locator
     private final By drbDepartStationFilter = By.xpath("//select[@name='FilterDpStation']");
@@ -68,21 +70,19 @@ public class MyTicketPage extends GeneralPage {
         return Constant.WEBDRIVER.findElement(lblAmountInfo);
     }
 
-    protected int getTableContent() {
-        return Constant.WEBDRIVER.findElements(tableContent).size();
+    protected List<WebElement> getTableContent() {
+        return Constant.WEBDRIVER.findElements(tableContent);
     }
 
     //Methods
     public boolean isTableContentExist() {
-        return getTableContent() > 0;
+        return !getTableContent().isEmpty();
     }
 
     public void cancelTicket(String departDate, String departStation, String arriveStation, String seatType, String ticketAmount) {
-        boolean isTableContentExist = isTableContentExist();
-        if (isTableContentExist){
-            this.getBtnCancel(departDate, departStation, arriveStation, seatType, ticketAmount).click();
-            Constant.WEBDRIVER.switchTo().alert().accept();
-        }
+        this.getBtnCancel(departDate, departStation, arriveStation, seatType, ticketAmount).click();
+        Constant.WEBDRIVER.switchTo().alert().accept();
+
     }
 
     public String getDepartStation() {

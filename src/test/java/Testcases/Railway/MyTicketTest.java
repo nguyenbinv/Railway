@@ -7,7 +7,6 @@ import PageObjects.Railway.LoginPage;
 import PageObjects.Railway.MyTicketPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 public class MyTicketTest extends BaseTest {
     HomePage homePage = new HomePage();
     LoginPage loginPage;
@@ -21,7 +20,7 @@ public class MyTicketTest extends BaseTest {
 
         loginPage = homePage.gotoLoginPage();
 
-        loginPage.login(Constant.USERNAME, Constant.PASSWORD);
+        loginPage.login(Constant.USERNAME, Constant.NEW_PASSWORD);
 
         myTicketPage = homePage.gotoMyTicketPage();
 

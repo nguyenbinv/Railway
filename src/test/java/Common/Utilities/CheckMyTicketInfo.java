@@ -6,7 +6,7 @@ public class CheckMyTicketInfo {
     public static boolean checkMyTicketInfo(MyTicketPage myTicketPage, String departDate, String departStation, String arriveStation, String seatType, String ticketAmount){
         boolean actualTableExist = myTicketPage.isTableContentExist();
 
-        if (!actualTableExist){
+        if (actualTableExist){
             String actualDepartDate = myTicketPage.getDepartDate();
             String actualDepartStation = myTicketPage.getDepartStation();
             String actualArriveStation = myTicketPage.getArriveStation();
