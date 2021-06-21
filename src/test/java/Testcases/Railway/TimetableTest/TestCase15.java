@@ -1,12 +1,15 @@
-package Testcases.Railway;
+package Testcases.Railway.TimetableTest;
 
 import Common.Constant.Constant;
 import Common.Utilities.CheckBookTicketStation;
-import PageObjects.Railway.*;
+import PageObjects.Railway.BookTicketPage;
+import PageObjects.Railway.HomePage;
+import PageObjects.Railway.LoginPage;
+import PageObjects.Railway.TimetablePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TimetableTest extends BaseTest {
+public class TestCase15 {
     HomePage homePage = new HomePage();
     LoginPage loginPage;
     TimetablePage timetablePage;
@@ -32,5 +35,4 @@ public class TimetableTest extends BaseTest {
         boolean checkStationValue = CheckBookTicketStation.checkBookTicketStation(bookTicketPage, "Huế", "Sài Gòn");
         Assert.assertTrue(checkStationValue);
     }
-
 }

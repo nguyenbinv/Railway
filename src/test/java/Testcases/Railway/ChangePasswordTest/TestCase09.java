@@ -1,4 +1,4 @@
-package Testcases.Railway;
+package Testcases.Railway.ChangePasswordTest;
 
 import Common.Constant.Constant;
 import PageObjects.Railway.ChangePasswordPage;
@@ -7,7 +7,7 @@ import PageObjects.Railway.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ChangePasswordTest extends BaseTest {
+public class TestCase09 {
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     ChangePasswordPage changePasswordPage;
@@ -31,7 +31,7 @@ public class ChangePasswordTest extends BaseTest {
         changePasswordPage.changePassword(Constant.PASSWORD, "abcd4321", "abcd4321");
 
         String actualMsg = changePasswordPage.getChangePasswordMessage();
-        String expectedMsg = "Your password has been updated";
+        String expectedMsg = "Your password has been updated!";
 
         Assert.assertEquals(actualMsg, expectedMsg, "A change password message is not displayed as expected");
     }

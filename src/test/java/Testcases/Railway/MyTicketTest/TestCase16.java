@@ -1,4 +1,4 @@
-package Testcases.Railway;
+package Testcases.Railway.MyTicketTest;
 
 import Common.Constant.Constant;
 import Common.Utilities.CheckMyTicketInfo;
@@ -9,7 +9,7 @@ import PageObjects.Railway.MyTicketPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class MyTicketTest extends BaseTest {
+public class TestCase16 {
     HomePage homePage = new HomePage();
     LoginPage loginPage;
     MyTicketPage myTicketPage;
@@ -28,16 +28,16 @@ public class MyTicketTest extends BaseTest {
 
         System.out.println("3. Book a ticket");
         bookTicketPage = homePage.gotoBookTicketPage();
-        bookTicketPage.bookTicket("6/24/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
+        bookTicketPage.bookTicket("6/28/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
 
         System.out.println("4. Click on \"My ticket\" tab");
         myTicketPage = homePage.gotoMyTicketPage();
 
         System.out.println("5. Click on \"Cancel\" button of ticket which user want to cancel.");
         System.out.println("6. Click on \"OK\" button on Confirmation message \"Are you sure?\"");
-        myTicketPage.cancelTicket("6/23/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
+        myTicketPage.cancelTicket("6/28/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
 
-        boolean checkTicketIsCanceled = !CheckMyTicketInfo.checkMyTicketInfo(myTicketPage, "6/24/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
+        boolean checkTicketIsCanceled = !CheckMyTicketInfo.checkMyTicketInfo(myTicketPage, "6/28/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
         Assert.assertTrue(checkTicketIsCanceled);
     }
 }

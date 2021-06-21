@@ -6,54 +6,19 @@
     <test verbose="2" preserve-order="true" name="Railway test">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="Testcases.Railway.LoginTest">
-                <methods>
-                    <include name="TC01"/>
-                    <include name="TC02"/>
-                    <include name="TC03"/>
-                    <include name="TC04"/>
-                    <include name="TC05"/>
-                    <include name="TC06"/>
-                </methods>
-            </class>
-
-            <class name="Testcases.Railway.RegisterTest">
-                <methods>
-                    <include name="TC07"/>
-                </methods>
-            </class>
-
-            <class name="Testcases.Railway.ChangePasswordTest">
-                <methods>
-                    <include name="TC09"/>
-                </methods>
-            </class>
-
-            <class name="Testcases.Railway.RegisterTest">
-                <methods>
-                    <include name="TC10"/>
-                    <include name="TC11"/>
-                </methods>
-            </class>
-
-            <class name="Testcases.Railway.BookTicketTest">
-                <methods>
-                    <include name="TC14"/>
-                </methods>
-            </class>
-
-            <class name="Testcases.Railway.TimetableTest">
-
-                <methods>
-                    <include name="TC15"/>
-                </methods>
-            </class>
-
-            <class name="Testcases.Railway.MyTicketTest">
-                <methods>
-                    <include name="TC16"/>
-                </methods>
-            </class>
+            <class name="Testcases.Railway.LoginTest.TestCase01" />
+            <class name="Testcases.Railway.LoginTest.TestCase02" />
+            <class name="Testcases.Railway.LoginTest.TestCase03" />
+            <class name="Testcases.Railway.LoginTest.TestCase04" />
+            <class name="Testcases.Railway.LoginTest.TestCase05" />
+            <class name="Testcases.Railway.LoginTest.TestCase06" />
+            <class name="Testcases.Railway.RegisterTest.TestCase07" />
+            <class name="Testcases.Railway.ChangePasswordTest.TestCase09" />
+            <class name="Testcases.Railway.RegisterTest.TestCase10" />
+            <class name="Testcases.Railway.RegisterTest.TestCase11" />
+            <class name="Testcases.Railway.BookTicketTest.TestCase14" />
+            <class name="Testcases.Railway.TimetableTest.TestCase15" />
+            <class name="Testcases.Railway.MyTicketTest.TestCase16" />
         </classes>
     </test>
 </suite>

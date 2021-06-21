@@ -3,13 +3,11 @@ package Testcases.Railway;
 import Common.Constant.Constant;
 import Common.Utilities.Utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 public class BaseTest {
     @BeforeMethod
@@ -29,7 +27,8 @@ public class BaseTest {
         } else {
             throw new Exception("Browser is not correct");
         }
-        Constant.WEBDRIVER.manage().window().maximize();
+        Dimension d = new Dimension(1300,1400);
+        Constant.WEBDRIVER.manage().window().setSize(d);
     }
 
     @AfterMethod
@@ -37,6 +36,5 @@ public class BaseTest {
         System.out.println("Post-Condition");
         Constant.WEBDRIVER.quit();
     }
-
 
 }
