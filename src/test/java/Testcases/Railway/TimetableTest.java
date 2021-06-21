@@ -16,14 +16,17 @@ public class TimetableTest extends BaseTest {
     public void TC15() {
         System.out.println("TC15 - User can open \"Book ticket\" page by clicking on \"Book ticket\" link in \"Train timetable\" page");
 
+        System.out.println("1. Navigate to QA Railway Website");
         homePage.open();
 
+        System.out.println("2. Login with a valid account");
         loginPage = homePage.gotoLoginPage();
-
         loginPage.login(Constant.USERNAME, Constant.NEW_PASSWORD);
 
+        System.out.println("3. Click on \"Timetable\" tab");
         timetablePage = homePage.gotoTimetablePage();
 
+        System.out.println("4. Click on \"book ticket\" link of the route from \"Huế\" to \"Sài Gòn\"");
         bookTicketPage = timetablePage.bookTicket("Huế", "Sài Gòn", "7:30", "21:00");
 
         boolean checkStationValue = CheckBookTicketStation.checkBookTicketStation(bookTicketPage, "Huế", "Sài Gòn");

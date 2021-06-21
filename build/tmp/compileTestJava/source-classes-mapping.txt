@@ -14,14 +14,14 @@ PageObjects/Railway/TimetablePage.java
  PageObjects.Railway.TimetablePage
 PageObjects/Railway/BookTicketPage.java
  PageObjects.Railway.BookTicketPage
-PageObjects/Railway/ContactPage.java
- PageObjects.Railway.ContactPage
+Common/Utilities/CheckBookTicketInfo.java
+ Common.Utilities.CheckBookTicketInfo
 PageObjects/Railway/GeneralPage.java
  PageObjects.Railway.GeneralPage
 PageObjects/Railway/LoginPage.java
  PageObjects.Railway.LoginPage
-Common/Utilities/CheckBookTicketInfo.java
- Common.Utilities.CheckBookTicketInfo
+PageObjects/Railway/ContactPage.java
+ PageObjects.Railway.ContactPage
 PageObjects/Railway/HomePage.java
  PageObjects.Railway.HomePage
 PageObjects/Railway/RegisterPage.java

@@ -18,10 +18,14 @@ public class LoginTest extends BaseTest {
     public void TC01() {
         System.out.println("TC01 - User can log into Railway with valid username and password");
 
+        System.out.println("1. Navigate to QA Railway Website");
         homePage.open();
 
+        System.out.println("2. Click on \"Login\" tab");
         loginPage = homePage.gotoLoginPage();
 
+        System.out.println("3. Enter valid Email and Password");
+        System.out.println("4. Click on \"Login\" button");
         loginPage.login(Constant.USERNAME, Constant.PASSWORD);
 
         String actualMsg = homePage.getWelcomeMessage();
@@ -34,10 +38,14 @@ public class LoginTest extends BaseTest {
     public void TC02() {
         System.out.println("TC02 - User can't login with blank \"Username\" textbox");
 
+        System.out.println("1. Navigate to QA Railway Website");
         homePage.open();
 
+        System.out.println("2. Click on \"Login\" tab");
         loginPage = homePage.gotoLoginPage();
 
+        System.out.println("3. User doesn't type any words into \"Username\" textbox but enter valid information into \"Password\" textbox");
+        System.out.println("4. Click on \"Login\" button");
         loginPage.login("", Constant.PASSWORD);
 
         String actualMsg = loginPage.getLoginErrorMsg();
@@ -50,10 +58,14 @@ public class LoginTest extends BaseTest {
     public void TC03() {
         System.out.println("TC03 - User cannot log into Railway with invalid password");
 
+        System.out.println("1. Navigate to QA Railway Website");
         homePage.open();
 
+        System.out.println("2. Click on \"Login\" tab");
         loginPage = homePage.gotoLoginPage();
 
+        System.out.println("3. Enter valid Email and invalid Password");
+        System.out.println("4. Click on \"Login\" button");
         loginPage.login(Constant.USERNAME, "");
 
         String actualMsg = loginPage.getLoginErrorMsg();
@@ -66,8 +78,10 @@ public class LoginTest extends BaseTest {
     public void TC04() {
         System.out.println("TC04 - Login page displays when un-logged User clicks on \"Book ticket\" tab");
 
+        System.out.println("1. Navigate to QA Railway Website");
         homePage.open();
 
+        System.out.println("2. Click on \"Book ticket\" tab");
         bookTicketPage = homePage.gotoBookTicketPage();
 
         String actualTitle = bookTicketPage.getPageTitle();
@@ -80,10 +94,15 @@ public class LoginTest extends BaseTest {
     public void TC05() {
         System.out.println("TC05 - System shows message when user enters wrong password several times");
 
+        System.out.println("1. Navigate to QA Railway Website");
         homePage.open();
 
+        System.out.println("2. Click on \"Login\" tab");
         LoginPage loginPage = homePage.gotoLoginPage();
 
+        System.out.println("3. Enter valid information into \"Username\" textbox except \"Password\" textbox");
+        System.out.println("4. Click on \"Login\" button");
+        System.out.println("5. Repeat step 3 three more times.");
         for (int i = 0; i < 4; i++) {
             JavascriptExecutor jse = (JavascriptExecutor) Constant.WEBDRIVER;
             jse.executeScript("scroll(0, 9000)");
@@ -100,10 +119,13 @@ public class LoginTest extends BaseTest {
     public void TC06() {
         System.out.println("TC06 - Additional pages display once user logged in");
 
+        System.out.println("1. Navigate to QA Railway Website");
         homePage.open();
 
+        System.out.println("2. Click on \"Login\" tab");
         loginPage = homePage.gotoLoginPage();
 
+        System.out.println("3. Login with valid account");
         loginPage.login(Constant.USERNAME, Constant.PASSWORD);
 
         myTicketPage = loginPage.gotoMyTicketPage();

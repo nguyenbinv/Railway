@@ -4,6 +4,7 @@
 
 <suite name="All Test Suite">
 <test verbose="2" preserve-order="true" name="C:/Users/SATTDN21.02.04/IdeaProjects/Railway">
+<parameter name="browser" value="chrome" />
 <classes>
 	<class name="Testcases.Railway.LoginTest">
 		<methods>
