@@ -4,6 +4,7 @@ import PageObjects.Railway.HomePage;
 import PageObjects.Railway.RegisterPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.util.Random;
 
 public class RegisterTest extends BaseTest {
