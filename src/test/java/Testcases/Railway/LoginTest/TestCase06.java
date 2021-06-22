@@ -3,6 +3,7 @@ package Testcases.Railway.LoginTest;
 import Common.Constant.Constant;
 import PageObjects.Railway.*;
 import Testcases.Railway.BaseTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,17 +13,17 @@ public class TestCase06 extends BaseTest {
     private MyTicketPage myTicketPage;
     private ChangePasswordPage changePasswordPage;
 
-    @Test
+    @Test(description = "TC06 - Additional pages display once user logged in")
     public void TC06() {
-        System.out.println("TC06 - Additional pages display once user logged in");
+        logger = extent.startTest("TC06 - Additional pages display once user logged in");
 
-        System.out.println("1. Navigate to QA Railway Website");
+        logger.log(LogStatus.PASS,"1. Navigate to QA Railway Website");
         homePage.open();
 
-        System.out.println("2. Click on \"Login\" tab");
+        logger.log(LogStatus.PASS,"2. Click on \"Login\" tab");
         loginPage = homePage.gotoLoginPage();
 
-        System.out.println("3. Login with valid account");
+        logger.log(LogStatus.PASS,"3. Login with valid account");
         loginPage.login(Constant.USERNAME, Constant.PASSWORD);
 
         myTicketPage = loginPage.gotoMyTicketPage();

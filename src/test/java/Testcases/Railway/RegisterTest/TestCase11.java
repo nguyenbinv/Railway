@@ -2,25 +2,27 @@ package Testcases.Railway.RegisterTest;
 
 import PageObjects.Railway.HomePage;
 import PageObjects.Railway.RegisterPage;
+import Testcases.Railway.BaseTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestCase11 {
+public class TestCase11 extends BaseTest {
     HomePage homePage = new HomePage();
     RegisterPage registerPage;
-    
-    @Test
-    public void TC11() {
-        System.out.println("TC11 - User can't create account while password and PID fields are empty");
 
-        System.out.println("1. Navigate to QA Railway Website");
+    @Test(description = "TC11 - User can't create account while password and PID fields are empty")
+    public void TC11() {
+        logger = extent.startTest("TC11 - User can't create account while password and PID fields are empty");
+
+        logger.log(LogStatus.PASS,"1. Navigate to QA Railway Website");
         homePage.open();
 
-        System.out.println("2. Click on \"Register\" tab");
+        logger.log(LogStatus.PASS,"2. Click on \"Register\" tab");
         registerPage = homePage.gotoRegisterPage();
 
-        System.out.println("3. Enter valid email address and leave other fields empty");
-        System.out.println("4. Click on \"Register\" button");
+        logger.log(LogStatus.PASS,"3. Enter valid email address and leave other fields empty");
+        logger.log(LogStatus.PASS,"4. Click on \"Register\" button");
         registerPage.register("nguyenvanhuy00@gmail.com", "", "abcd4321", "");
 
         String actualErrorMsg = registerPage.getErrorMessage();

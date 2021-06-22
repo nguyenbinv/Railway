@@ -5,32 +5,34 @@ import Common.Utilities.CheckBookTicketInfo;
 import PageObjects.Railway.BookTicketPage;
 import PageObjects.Railway.HomePage;
 import PageObjects.Railway.LoginPage;
+import Testcases.Railway.BaseTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestCase14 {
+public class TestCase14 extends BaseTest {
     HomePage homePage = new HomePage();
     LoginPage loginPage;
     BookTicketPage bookTicketPage;
 
     //    @Test(dataProvider="BookTicketDataSet",dataProviderClass= BookTicketDataSet.class)
 //    public void TC14(String departDate, String departFrom, String arriveAt, String seatType, String ticketAmount) {
-    @Test
+    @Test(description = "TC14 - User can book 1 ticket at a time")
     public void TC14() {
-        System.out.println("TC14 - User can book 1 ticket at a time");
+        logger = extent.startTest("TC14 - User can book 1 ticket at a time");
 
-        System.out.println("1. Navigate to QA Railway Website");
+        logger.log(LogStatus.PASS, "1. Navigate to QA Railway Website");
         homePage.open();
 
-        System.out.println("2. Login with a valid account");
+        logger.log(LogStatus.PASS, "2. Login with a valid account");
         loginPage = homePage.gotoLoginPage();
         loginPage.login(Constant.USERNAME, Constant.NEW_PASSWORD);
 
-        System.out.println("3. Click on \"Book ticket\" tab");
+        logger.log(LogStatus.PASS, "3. Click on \"Book ticket\" tab");
         bookTicketPage = homePage.gotoBookTicketPage();
 
-        System.out.println("4. Select valid value from lists");
-        System.out.println("5. Click on \"Book ticket\" button");
+        logger.log(LogStatus.PASS, "4. Select valid value from lists");
+        logger.log(LogStatus.PASS, "5. Click on \"Book ticket\" button");
 //        bookTicketPage.bookTicket(departDate, departFrom, arriveAt, seatType, ticketAmount);
         bookTicketPage.bookTicket("6/28/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
 
@@ -38,7 +40,7 @@ public class TestCase14 {
         String expectedBookTicketMsg = "Ticket Booked Successfully!";
         Assert.assertEquals(actualBookTicketMsg, expectedBookTicketMsg, "A book ticket message is not displayed as expected");
 
-        boolean checkActualTicketInfo = CheckBookTicketInfo.checkTicketInfo(this.bookTicketPage, "6/28/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
+        boolean checkActualTicketInfo = CheckBookTicketInfo.checkTicketInfo(bookTicketPage, "6/28/2021", "Sài Gòn", "Nha Trang", "Soft bed with air conditioner", "1");
         Assert.assertTrue(checkActualTicketInfo, "Ticket info is not display as booked");
     }
 }

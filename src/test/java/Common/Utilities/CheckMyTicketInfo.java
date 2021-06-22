@@ -12,7 +12,8 @@ public class CheckMyTicketInfo {
             String actualArriveStation = myTicketPage.getArriveStation();
             String actualSeatType = myTicketPage.getSeatType();
             String actualAmount = myTicketPage.getAmount();
-            return actualDepartDate.equals(departDate) && actualDepartStation.equals(departStation) && actualArriveStation.equals(arriveStation) && actualSeatType.equals(seatType) && actualAmount.equals(ticketAmount);
+            return actualDepartDate.equals(departDate) && actualDepartStation.equals(departStation)
+                    && actualArriveStation.equals(arriveStation) && actualSeatType.equals(seatType) && actualAmount.equals(ticketAmount);
         }
 
         return false;
