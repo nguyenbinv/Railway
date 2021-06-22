@@ -8,6 +8,7 @@
 <!--        <listener class-name="Common.Utilities.Listeners.AnnotationTransformer" />-->
     </listeners>
     <test verbose="2" preserve-order="true" name="Railway test">
+
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="Testcases.Railway.LoginTest.TestCase01" />
@@ -24,5 +25,6 @@
             <class name="Testcases.Railway.TimetableTest.TestCase15" />
             <class name="Testcases.Railway.MyTicketTest.TestCase16" />
         </classes>
+
     </test>
 </suite>

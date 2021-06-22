@@ -53,10 +53,10 @@ public class BaseTest {
     @AfterMethod
     public void getResult(ITestResult result) {
         if (result.getStatus() == ITestResult.FAILURE) {
-            logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getName());
-            logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getThrowable());
+            logger.log(LogStatus.FAIL, "<b>" + result.getName() + " IS FAILED</b>");
+            logger.log(LogStatus.FAIL, "<b>THE ERROR:</br>" + result.getThrowable() + "</b>");
         } else if (result.getStatus() == ITestResult.SKIP) {
-            logger.log(LogStatus.SKIP, "Test Case Skipped is " + result.getName());
+            logger.log(LogStatus.SKIP, "<b>" + result.getName() + "IS SKIPPED</b>");
         }
         extent.endTest(logger);
     }

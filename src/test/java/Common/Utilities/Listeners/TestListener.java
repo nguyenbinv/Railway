@@ -26,7 +26,7 @@ public class TestListener extends BaseTest implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
         Log.info(getTestMethodName(iTestResult) + " test is succeed.");
-        logger.log(LogStatus.PASS, "Test passed");
+        logger.log(LogStatus.PASS, "<b>TESTCASE IS PASSED</b>");
     }
 
     @Override
@@ -36,12 +36,6 @@ public class TestListener extends BaseTest implements ITestListener {
         String base64Screenshot =
                 "data:image/png;base64," + ((TakesScreenshot) Objects.requireNonNull(driver)).getScreenshotAs(OutputType.BASE64);
         logger.log(LogStatus.INFO, "Screenshot bellow: " + logger.addBase64ScreenShot(base64Screenshot));
-    }
-
-    @Override
-    public void onTestSkipped(ITestResult iTestResult) {
-        Log.info(getTestMethodName(iTestResult) + " test is skipped.");
-        logger.log(LogStatus.SKIP, "Test Skipped");
     }
 
 }
