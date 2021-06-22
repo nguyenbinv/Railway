@@ -5,7 +5,6 @@
 <suite name="All Test Suite">
     <listeners>
         <listener class-name="Common.Utilities.Listeners.TestListener" />
-<!--        <listener class-name="Common.Utilities.Listeners.AnnotationTransformer" />-->
     </listeners>
     <test verbose="2" preserve-order="true" name="Railway test">
 

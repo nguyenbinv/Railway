@@ -13,10 +13,10 @@
         <protocol>https</protocol>
 
         <!-- title of the document -->
-        <documentTitle>RailwayWebsiteTest Report</documentTitle>
+        <documentTitle>ExtentReports 2.0</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>Railway Website</reportName>
+        <reportName></reportName>
 
         <!-- report headline - displayed at top-nav, after reportHeadline -->
         <reportHeadline>Automation Report</reportHeadline>
