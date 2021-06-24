@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="24" total="37" passed="12" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-06-24T13:29:57 ICT" name="All Test Suite" finished-at="2021-06-24T13:31:22 ICT" duration-ms="84937">
+    <groups>
+    </groups>
+    <test started-at="2021-06-24T13:29:57 ICT" name="Railway test" finished-at="2021-06-24T13:31:22 ICT" duration-ms="84937">
+      <class name="Testcases.Railway.LoginTest.TestCase06">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.LoginTest.TestCase06@25b485ba]" started-at="2021-06-24T13:30:27 ICT" name="beforeClass" finished-at="2021-06-24T13:30:28 ICT" duration-ms="1138" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC06()[pri:0, instance:Testcases.Railway.LoginTest.TestCase06@25b485ba]" started-at="2021-06-24T13:30:28 ICT" name="TC06" description="TC06 - Additional pages display once user logged in" finished-at="2021-06-24T13:30:35 ICT" duration-ms="7003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.LoginTest.TestCase06@25b485ba]" started-at="2021-06-24T13:30:35 ICT" name="getResult" finished-at="2021-06-24T13:30:35 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC06 status=SUCCESS method=TestCase06.TC06()[pri:0, instance:Testcases.Railway.LoginTest.TestCase06@25b485ba] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.LoginTest.TestCase06@25b485ba]" started-at="2021-06-24T13:30:35 ICT" name="afterClass" finished-at="2021-06-24T13:30:35 ICT" duration-ms="211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Testcases.Railway.LoginTest.TestCase06 -->
+      <class name="Testcases.Railway.LoginTest.TestCase05">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.LoginTest.TestCase05@1f1c7bf6]" started-at="2021-06-24T13:30:19 ICT" name="beforeClass" finished-at="2021-06-24T13:30:20 ICT" duration-ms="1182" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC05()[pri:0, instance:Testcases.Railway.LoginTest.TestCase05@1f1c7bf6]" started-at="2021-06-24T13:30:20 ICT" name="TC05" description="TC05 - System shows message when user enters wrong password several times" finished-at="2021-06-24T13:30:26 ICT" duration-ms="5945" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Login error message is not displayed as expected expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Login error message is not displayed as expected expected [You have used 4 out of 5 login attempts. After all 5 have been used, you will be unable to login for 15 minutes.] but found [Invalid username or password. Please try again.]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at Testcases.Railway.LoginTest.TestCase05.TC05(TestCase05.java:36)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC05 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.LoginTest.TestCase05@1f1c7bf6]" started-at="2021-06-24T13:30:26 ICT" name="getResult" finished-at="2021-06-24T13:30:26 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC05 status=FAILURE method=TestCase05.TC05()[pri:0, instance:Testcases.Railway.LoginTest.TestCase05@1f1c7bf6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.LoginTest.TestCase05@1f1c7bf6]" started-at="2021-06-24T13:30:26 ICT" name="afterClass" finished-at="2021-06-24T13:30:27 ICT" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Testcases.Railway.LoginTest.TestCase05 -->
+      <class name="Testcases.Railway.MyTicketTest.TestCase16">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.MyTicketTest.TestCase16@25a65b77]" started-at="2021-06-24T13:31:13 ICT" name="beforeClass" finished-at="2021-06-24T13:31:14 ICT" duration-ms="1248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC16()[pri:0, instance:Testcases.Railway.MyTicketTest.TestCase16@25a65b77]" started-at="2021-06-24T13:31:14 ICT" name="TC16" description="TC16 - User can cancel a ticket" finished-at="2021-06-24T13:31:22 ICT" duration-ms="7254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC16 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.MyTicketTest.TestCase16@25a65b77]" started-at="2021-06-24T13:31:22 ICT" name="getResult" finished-at="2021-06-24T13:31:22 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC16 status=SUCCESS method=TestCase16.TC16()[pri:0, instance:Testcases.Railway.MyTicketTest.TestCase16@25a65b77] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.MyTicketTest.TestCase16@25a65b77]" started-at="2021-06-24T13:31:22 ICT" name="afterClass" finished-at="2021-06-24T13:31:22 ICT" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Testcases.Railway.MyTicketTest.TestCase16 -->
+      <class name="Testcases.Railway.RegisterTest.TestCase07">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.RegisterTest.TestCase07@2b546384]" started-at="2021-06-24T13:30:35 ICT" name="beforeClass" finished-at="2021-06-24T13:30:36 ICT" duration-ms="1142" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC07()[pri:0, instance:Testcases.Railway.RegisterTest.TestCase07@2b546384]" started-at="2021-06-24T13:30:36 ICT" name="TC07" description="TC07 - User can create new account" finished-at="2021-06-24T13:30:40 ICT" duration-ms="4096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC07 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.RegisterTest.TestCase07@2b546384]" started-at="2021-06-24T13:30:40 ICT" name="afterClass" finished-at="2021-06-24T13:30:40 ICT" duration-ms="201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.RegisterTest.TestCase07@2b546384]" started-at="2021-06-24T13:30:40 ICT" name="getResult" finished-at="2021-06-24T13:30:40 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC07 status=SUCCESS method=TestCase07.TC07()[pri:0, instance:Testcases.Railway.RegisterTest.TestCase07@2b546384] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- Testcases.Railway.RegisterTest.TestCase07 -->
+      <class name="Testcases.Railway.LoginTest.TestCase02">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.LoginTest.TestCase02@7d68ef40]" started-at="2021-06-24T13:30:04 ICT" name="beforeClass" finished-at="2021-06-24T13:30:05 ICT" duration-ms="1231" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC02()[pri:0, instance:Testcases.Railway.LoginTest.TestCase02@7d68ef40]" started-at="2021-06-24T13:30:05 ICT" name="TC02" description="TC02 - User can&#039;t login with blank &quot;Username&quot; textbox" finished-at="2021-06-24T13:30:09 ICT" duration-ms="3984" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.LoginTest.TestCase02@7d68ef40]" started-at="2021-06-24T13:30:09 ICT" name="getResult" finished-at="2021-06-24T13:30:09 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC02 status=SUCCESS method=TestCase02.TC02()[pri:0, instance:Testcases.Railway.LoginTest.TestCase02@7d68ef40] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.LoginTest.TestCase02@7d68ef40]" started-at="2021-06-24T13:30:09 ICT" name="afterClass" finished-at="2021-06-24T13:30:09 ICT" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Testcases.Railway.LoginTest.TestCase02 -->
+      <class name="Testcases.Railway.LoginTest.TestCase01">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:Testcases.Railway.LoginTest.TestCase01@55a1c291]" started-at="2021-06-24T13:29:57 ICT" name="startReport" finished-at="2021-06-24T13:29:57 ICT" duration-ms="225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.LoginTest.TestCase01@55a1c291]" started-at="2021-06-24T13:29:58 ICT" name="beforeClass" finished-at="2021-06-24T13:29:59 ICT" duration-ms="1644" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC01()[pri:0, instance:Testcases.Railway.LoginTest.TestCase01@55a1c291]" started-at="2021-06-24T13:29:59 ICT" name="TC01" description="TC01 - User can log into Railway with valid username and password" finished-at="2021-06-24T13:30:03 ICT" duration-ms="4336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.LoginTest.TestCase01@55a1c291]" started-at="2021-06-24T13:30:03 ICT" name="getResult" finished-at="2021-06-24T13:30:03 ICT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC01 status=SUCCESS method=TestCase01.TC01()[pri:0, instance:Testcases.Railway.LoginTest.TestCase01@55a1c291] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.LoginTest.TestCase01@55a1c291]" started-at="2021-06-24T13:30:03 ICT" name="afterClass" finished-at="2021-06-24T13:30:04 ICT" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:Testcases.Railway.LoginTest.TestCase01@55a1c291]" started-at="2021-06-24T13:31:22 ICT" name="endReport" finished-at="2021-06-24T13:31:22 ICT" duration-ms="383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- Testcases.Railway.LoginTest.TestCase01 -->
+      <class name="Testcases.Railway.LoginTest.TestCase04">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.LoginTest.TestCase04@75c072cb]" started-at="2021-06-24T13:30:14 ICT" name="beforeClass" finished-at="2021-06-24T13:30:15 ICT" duration-ms="1276" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC04()[pri:0, instance:Testcases.Railway.LoginTest.TestCase04@75c072cb]" started-at="2021-06-24T13:30:15 ICT" name="TC04" description="TC04 - Login page displays when un-logged User clicks on &quot;Book ticket&quot; tab" finished-at="2021-06-24T13:30:19 ICT" duration-ms="3320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC04 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.LoginTest.TestCase04@75c072cb]" started-at="2021-06-24T13:30:19 ICT" name="getResult" finished-at="2021-06-24T13:30:19 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC04 status=SUCCESS method=TestCase04.TC04()[pri:0, instance:Testcases.Railway.LoginTest.TestCase04@75c072cb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.LoginTest.TestCase04@75c072cb]" started-at="2021-06-24T13:30:19 ICT" name="afterClass" finished-at="2021-06-24T13:30:19 ICT" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Testcases.Railway.LoginTest.TestCase04 -->
+      <class name="Testcases.Railway.LoginTest.TestCase03">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.LoginTest.TestCase03@5b0abc94]" started-at="2021-06-24T13:30:09 ICT" name="beforeClass" finished-at="2021-06-24T13:30:10 ICT" duration-ms="1204" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC03()[pri:0, instance:Testcases.Railway.LoginTest.TestCase03@5b0abc94]" started-at="2021-06-24T13:30:10 ICT" name="TC03" description="TC03 - User cannot log into Railway with invalid password" finished-at="2021-06-24T13:30:14 ICT" duration-ms="3481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.LoginTest.TestCase03@5b0abc94]" started-at="2021-06-24T13:30:14 ICT" name="afterClass" finished-at="2021-06-24T13:30:14 ICT" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.LoginTest.TestCase03@5b0abc94]" started-at="2021-06-24T13:30:14 ICT" name="getResult" finished-at="2021-06-24T13:30:14 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC03 status=SUCCESS method=TestCase03.TC03()[pri:0, instance:Testcases.Railway.LoginTest.TestCase03@5b0abc94] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- Testcases.Railway.LoginTest.TestCase03 -->
+      <class name="Testcases.Railway.RegisterTest.TestCase11">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.RegisterTest.TestCase11@2c34f934]" started-at="2021-06-24T13:30:53 ICT" name="beforeClass" finished-at="2021-06-24T13:30:54 ICT" duration-ms="1190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC11()[pri:0, instance:Testcases.Railway.RegisterTest.TestCase11@2c34f934]" started-at="2021-06-24T13:30:54 ICT" name="TC11" description="TC11 - User can&#039;t create account while password and PID fields are empty" finished-at="2021-06-24T13:30:58 ICT" duration-ms="3876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC11 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.RegisterTest.TestCase11@2c34f934]" started-at="2021-06-24T13:30:58 ICT" name="getResult" finished-at="2021-06-24T13:30:58 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC11 status=SUCCESS method=TestCase11.TC11()[pri:0, instance:Testcases.Railway.RegisterTest.TestCase11@2c34f934] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.RegisterTest.TestCase11@2c34f934]" started-at="2021-06-24T13:30:58 ICT" name="afterClass" finished-at="2021-06-24T13:30:58 ICT" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Testcases.Railway.RegisterTest.TestCase11 -->
+      <class name="Testcases.Railway.RegisterTest.TestCase10">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.RegisterTest.TestCase10@55ca8de8]" started-at="2021-06-24T13:30:48 ICT" name="beforeClass" finished-at="2021-06-24T13:30:49 ICT" duration-ms="1188" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC10()[pri:0, instance:Testcases.Railway.RegisterTest.TestCase10@55ca8de8]" started-at="2021-06-24T13:30:49 ICT" name="TC10" description="TC10 - User can&#039;t create account with &quot;Confirm password&quot; is not the same with &quot;Password&quot;" finished-at="2021-06-24T13:30:53 ICT" duration-ms="3858" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC10 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.RegisterTest.TestCase10@55ca8de8]" started-at="2021-06-24T13:30:53 ICT" name="getResult" finished-at="2021-06-24T13:30:53 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC10 status=SUCCESS method=TestCase10.TC10()[pri:0, instance:Testcases.Railway.RegisterTest.TestCase10@55ca8de8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.RegisterTest.TestCase10@55ca8de8]" started-at="2021-06-24T13:30:53 ICT" name="afterClass" finished-at="2021-06-24T13:30:53 ICT" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Testcases.Railway.RegisterTest.TestCase10 -->
+      <class name="Testcases.Railway.TimetableTest.TestCase15">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.TimetableTest.TestCase15@240237d2]" started-at="2021-06-24T13:31:06 ICT" name="beforeClass" finished-at="2021-06-24T13:31:07 ICT" duration-ms="1192" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC15()[pri:0, instance:Testcases.Railway.TimetableTest.TestCase15@240237d2]" started-at="2021-06-24T13:31:07 ICT" name="TC15" description="TC15 - User can open &quot;Book ticket&quot; page by clicking on &quot;Book ticket&quot; link in &quot;Train timetable&quot; page" finished-at="2021-06-24T13:31:13 ICT" duration-ms="5826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC15 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.TimetableTest.TestCase15@240237d2]" started-at="2021-06-24T13:31:13 ICT" name="getResult" finished-at="2021-06-24T13:31:13 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC15 status=SUCCESS method=TestCase15.TC15()[pri:0, instance:Testcases.Railway.TimetableTest.TestCase15@240237d2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.TimetableTest.TestCase15@240237d2]" started-at="2021-06-24T13:31:13 ICT" name="afterClass" finished-at="2021-06-24T13:31:13 ICT" duration-ms="265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Testcases.Railway.TimetableTest.TestCase15 -->
+      <class name="Testcases.Railway.BookTicketTest.TestCase14">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.BookTicketTest.TestCase14@12d3a4e9]" started-at="2021-06-24T13:30:58 ICT" name="beforeClass" finished-at="2021-06-24T13:30:59 ICT" duration-ms="1234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC14()[pri:0, instance:Testcases.Railway.BookTicketTest.TestCase14@12d3a4e9]" started-at="2021-06-24T13:30:59 ICT" name="TC14" description="TC14 - User can book 1 ticket at a time" finished-at="2021-06-24T13:31:06 ICT" duration-ms="6346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC14 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.BookTicketTest.TestCase14@12d3a4e9]" started-at="2021-06-24T13:31:06 ICT" name="getResult" finished-at="2021-06-24T13:31:06 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC14 status=SUCCESS method=TestCase14.TC14()[pri:0, instance:Testcases.Railway.BookTicketTest.TestCase14@12d3a4e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.BookTicketTest.TestCase14@12d3a4e9]" started-at="2021-06-24T13:31:06 ICT" name="afterClass" finished-at="2021-06-24T13:31:06 ICT" duration-ms="168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Testcases.Railway.BookTicketTest.TestCase14 -->
+      <class name="Testcases.Railway.ChangePasswordTest.TestCase09">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:Testcases.Railway.ChangePasswordTest.TestCase09@2893de87]" started-at="2021-06-24T13:30:40 ICT" name="beforeClass" finished-at="2021-06-24T13:30:42 ICT" duration-ms="1148" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="TC09()[pri:0, instance:Testcases.Railway.ChangePasswordTest.TestCase09@2893de87]" started-at="2021-06-24T13:30:42 ICT" name="TC09" description="TC09 - User can change password" finished-at="2021-06-24T13:30:47 ICT" duration-ms="5837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC09 -->
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:Testcases.Railway.ChangePasswordTest.TestCase09@2893de87]" started-at="2021-06-24T13:30:47 ICT" name="getResult" finished-at="2021-06-24T13:30:47 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC09 status=SUCCESS method=TestCase09.TC09()[pri:0, instance:Testcases.Railway.ChangePasswordTest.TestCase09@2893de87] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:Testcases.Railway.ChangePasswordTest.TestCase09@2893de87]" started-at="2021-06-24T13:30:47 ICT" name="afterClass" finished-at="2021-06-24T13:30:48 ICT" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- Testcases.Railway.ChangePasswordTest.TestCase09 -->
+    </test> <!-- Railway test -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
